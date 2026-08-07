@@ -199,30 +199,8 @@ export const CinematicProjectsShowcase: React.FC = () => {
       {/* PINNED STICKY SHOWCASE CONTAINER (350vh scroll height) */}
       <div ref={pinnedSectionRef} className="relative w-full h-screen overflow-hidden bg-black flex flex-col justify-between">
         
-        {/* Animated Background Ambient Gradient Environment per Project */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeProject.id}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className={`absolute inset-0 bg-gradient-to-br ${activeProject.bgGradient} pointer-events-none z-0`}
-          >
-            <div 
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full blur-[180px] pointer-events-none"
-              style={{ backgroundColor: activeProject.accentColor, opacity: 0.18 }}
-            />
-            {/* Subtle Grid Lines Overlay */}
-            <div 
-              className="absolute inset-0 opacity-[0.05]"
-              style={{
-                backgroundImage: 'linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(90deg, #ffffff 1px, transparent 1px)',
-                backgroundSize: '48px 48px',
-              }}
-            />
-          </motion.div>
-        </AnimatePresence>
+        {/* Plain Solid Black Background */}
+        <div className="absolute inset-0 bg-black pointer-events-none z-0" />
 
         {/* Top Header Bar */}
         <div className="relative z-20 w-full px-6 sm:px-10 pt-24 sm:pt-28 flex items-center justify-between">

@@ -130,7 +130,7 @@ export const Navbar: React.FC<NavbarProps> = ({ entranceComplete }) => {
       </div>
 
       {/* Direct Email Header Link (Desktop) */}
-      <div className="hidden lg:flex items-center">
+      <div className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">
         <a
           href="mailto:raoshivansh10@gmail.com"
           className="text-xs text-white/60 hover:text-white font-mono transition-colors"
