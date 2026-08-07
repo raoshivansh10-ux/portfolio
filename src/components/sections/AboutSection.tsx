@@ -239,6 +239,9 @@ export const AboutSection: React.FC = () => {
               <p className="font-clash text-lg font-bold text-white tracking-wide">
                 Design Meets Intelligence
               </p>
+              <p className="font-sans text-xs text-slate-300 font-medium italic">
+                "Driven by curiosity, powered by code"
+              </p>
             </div>
           </div>
 
