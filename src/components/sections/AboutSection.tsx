@@ -229,6 +229,17 @@ export const AboutSection: React.FC = () => {
                 </p>
               </div>
             </div>
+
+            {/* Design Meets Intelligence Philosophy Badge */}
+            <div className="glass-panel p-4 rounded-2xl border border-white/15 space-y-2 hover:border-[#F598F2]/50 transition-colors mt-4">
+              <div className="flex items-center space-x-2 text-[#F598F2] font-mono text-[11px] font-bold uppercase tracking-wider">
+                <Sparkles className="w-4 h-4 text-[#F598F2]" />
+                <span>CORE PHILOSOPHY</span>
+              </div>
+              <p className="font-clash text-lg font-bold text-white tracking-wide">
+                Design Meets Intelligence
+              </p>
+            </div>
           </div>
 
         </div>
