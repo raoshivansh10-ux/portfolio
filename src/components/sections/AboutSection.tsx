@@ -4,6 +4,7 @@ import { Sparkles, Star, Code2, BrainCircuit, Terminal, Compass, CheckCircle2, A
 import { soundFx } from '../ui/SoundEngine';
 import DecayCard from '../ui/DecayCard';
 import DecryptedText from '../ui/DecryptedText';
+import { CircularText } from '../ui/CircularText';
 
 export const AboutSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -230,18 +231,30 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Design Meets Intelligence Philosophy Badge */}
-            <div className="glass-panel p-4 rounded-2xl border border-white/15 space-y-2 hover:border-[#F598F2]/50 transition-colors mt-4">
-              <div className="flex items-center space-x-2 text-[#F598F2] font-mono text-[11px] font-bold uppercase tracking-wider">
-                <Sparkles className="w-4 h-4 text-[#F598F2]" />
-                <span>CORE PHILOSOPHY</span>
+            {/* Design Meets Intelligence Philosophy Badge with CircularText */}
+            <div className="glass-panel p-5 rounded-2xl border border-white/15 hover:border-[#F598F2]/50 transition-colors mt-4 flex items-center justify-between gap-4 overflow-hidden relative">
+              <div className="space-y-2 z-10">
+                <div className="flex items-center space-x-2 text-[#F598F2] font-mono text-[11px] font-bold uppercase tracking-wider">
+                  <Sparkles className="w-4 h-4 text-[#F598F2]" />
+                  <span>CORE PHILOSOPHY</span>
+                </div>
+                <p className="font-clash text-lg sm:text-xl font-bold text-white tracking-wide">
+                  Design Meets Intelligence
+                </p>
+                <p className="font-sans text-xs text-slate-300 font-medium italic">
+                  "Driven by curiosity, powered by code"
+                </p>
               </div>
-              <p className="font-clash text-lg font-bold text-white tracking-wide">
-                Design Meets Intelligence
-              </p>
-              <p className="font-sans text-xs text-slate-300 font-medium italic">
-                "Driven by curiosity, powered by code"
-              </p>
+
+              {/* Animated CircularText Badge */}
+              <div className="shrink-0 z-10">
+                <CircularText
+                  text="DESIGN*MEETS*INTELLIGENCE*"
+                  spinDuration={18}
+                  onHover="speedUp"
+                  className="text-[#F598F2]"
+                />
+              </div>
             </div>
           </div>
 
